@@ -20,6 +20,6 @@ export async function obtenerTokenSpotify() {
     let tokenrespuesta=await respuestaServidor.json()
 
     //3- entregar el resultado al componente para que se lo pinte al usuario
-    console.log("good")
-    return tokenrespuesta
+    return `${tokenrespuesta.token_type} ${tokenrespuesta.access_token}`
+    
 }
